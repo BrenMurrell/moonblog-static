@@ -1,0 +1,30 @@
+{
+  "name": "static.blog.moon.co.nz",
+  "version": "1.0.0",
+  "description": "Moon.co.nz static blog theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrenMurrell/moonblog-static"
+  },
+  "keywords": [
+    "static",
+    "html",
+    "scss"
+  ],
+  "author": "Bren Murrell @ Asterisk*",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "es6-promise": "^4.0.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "gutil": "^1.6.4",
+    "jplayer": "^2.9.2",
+    "meow": "^3.3.0"
+  }
+}
