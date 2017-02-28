@@ -1,0 +1,77 @@
+$navElements: 6;
+$speedFactor: 0.15;
+$animTiming: "ease-in";
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  transition-property: height;
+  transition-delay: #{$navElements * $speedFactor}s;
+  &.navopen {
+    height: 100%;
+    transition-delay: 0s;
+    transition-timing-function: $animTiming;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  li {
+    border-bottom: 1px solid #d3d3d3;
+    transition-property: transform, background;
+    transition-duration: #{$speedFactor}s;
+    transition-delay: 0s;
+    transform: rotate3d(1,0,0, 90deg);
+    transform-origin: top left;
+    transition-timing-function: $animTiming;
+    background: linear-gradient(to bottom, rgba(159,159,159,1) 0%, rgba(200,200,200,1)  100%);
+    //background: rgba(0,0,0,0.8);
+    height: #{((1 / $navElements) * 100) + "%"};
+    a {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 1em;
+      background-color: rgba(255,255,255,0);
+      transition-property: background-color;
+      transition-duration: #{$speedFactor}s;
+      transition-delay: 0s;
+      transition-timing-function: $animTiming;
+      text-align: center;
+      text-decoration: none;
+      line-height: 100%;
+    }
+    @for $i from 1 through $navElements {
+      &:nth-child(#{$navElements}n + #{$i}) {
+        transition-delay: #{($navElements - $i) * $speedFactor}s;
+        a {
+          transition-delay: #{(($navElements - $i) * $speedFactor) + ($speedFactor / 4)}s;
+        }
+      }
+    }
+
+
+  }
+  &.navopen {
+    li {
+      transform: rotate3d(0,0,0, 90deg);
+      a {
+        background-color: rgba(255,255,255,1);
+      }
+      @for $i from 1 through $navElements {
+        &:nth-child(#{$navElements}n + #{$i}) {
+          transition-delay: #{($i * $speedFactor) - $speedFactor}s;
+          a {
+            transition-delay: #{($i * $speedFactor) - $speedFactor}s;
+          }
+        }
+      }
+
+    }
+  }
+}

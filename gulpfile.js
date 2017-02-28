@@ -117,7 +117,7 @@ gulp.task('serve', ['watch'], function() {
 
         browserSync.stream();
 
-        gulp.watch("Views/*.cshtml", "*.html").on('change', browserSync.reload); // Reload the page when a view file changes
+        gulp.watch("/*.html").on('change', browserSync.reload); // Reload the page when a view file changes
     }
 });
 
