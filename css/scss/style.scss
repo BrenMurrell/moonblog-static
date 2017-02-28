@@ -1,0 +1,27 @@
+h1 {
+  font-family: sans-serif;
+}
+.pure-u-1-1 {
+  border: 1px inset;
+  box-sizing: border-box;
+}
+.blog__main {
+  @media all and (min-width: 64em) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.1);
+    height: 100%;
+  }
+}
+.blog__secondary {
+  @media all and (min-width: 64em) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.1);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

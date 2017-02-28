@@ -58,7 +58,7 @@ var apConfig = {
 // BrowserSync Config
 var bsConfig = {
     enabled: true,
-    proxy: "localhost:8947"
+    proxy: "localhost:8902"
 };
 
 
@@ -117,7 +117,7 @@ gulp.task('serve', ['watch'], function() {
 
         browserSync.stream();
 
-        gulp.watch("Views/*.cshtml").on('change', browserSync.reload); // Reload the page when a view file changes
+        gulp.watch("Views/*.cshtml", "*.html").on('change', browserSync.reload); // Reload the page when a view file changes
     }
 });
 
