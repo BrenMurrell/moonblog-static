@@ -1,0 +1,1 @@
+# Blog theme static HTML
