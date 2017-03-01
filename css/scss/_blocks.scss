@@ -1,0 +1,40 @@
+.block {
+  background-size: cover;
+  display: table;
+}
+.block--main {
+  @media all and (min-width: 64em) {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+  }
+}
+.block--secondary__wrapper {
+  p {
+    font-size: 12px;
+  }
+  @media all and (min-width: 64em) {
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+.block__copy {
+  display: table-cell;
+  vertical-align: middle;
+}
+.block__copy__inner {
+  background: rgba(0,0,0,0.4);
+  padding: 2em;
+  max-width: 60%;
+  display: block;
+  margin: 5em auto;
+  color: #fff;
+  text-align: center;
+}

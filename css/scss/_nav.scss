@@ -10,6 +10,7 @@ nav {
   height: 0%;
   transition-property: height;
   transition-delay: #{$navElements * $speedFactor}s;
+  z-index: 1;
   &.navopen {
     height: 100%;
     transition-delay: 0s;
@@ -30,7 +31,6 @@ nav {
     transform-origin: top left;
     transition-timing-function: $animTiming;
     background: linear-gradient(to bottom, rgba(159,159,159,1) 0%, rgba(200,200,200,1)  100%);
-    //background: rgba(0,0,0,0.8);
     height: #{((1 / $navElements) * 100) + "%"};
     a {
       display: block;
@@ -51,6 +51,10 @@ nav {
         transition-delay: #{($navElements - $i) * $speedFactor}s;
         a {
           transition-delay: #{(($navElements - $i) * $speedFactor) + ($speedFactor / 4)}s;
+          span:after {
+            content: "#{$i}";
+            display: inline-block;
+          }
         }
       }
     }
