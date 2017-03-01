@@ -7,8 +7,8 @@
     position: fixed;
     left: 0;
     top: 0;
-
     height: 100%;
+    h1 { font-size: 36px; }
   }
 }
 .block--secondary__wrapper {
@@ -19,16 +19,23 @@
     position: fixed;
     right: 0;
     top: 0;
-
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    h1 {
+      font-size: 18px;
+    }
   }
 }
 .block__copy {
   display: table-cell;
   vertical-align: middle;
   text-decoration: none;
+  &:hover {
+    .block__copy__inner {
+      transform: scale3d(1.03,1.03,1.03);
+    }
+  }
 }
 .block__copy__inner {
   background: rgba(0,0,0,0.4);
@@ -38,4 +45,7 @@
   margin: 5em auto;
   color: #fff;
   text-align: center;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transform: scale3d(1,1,1);
 }

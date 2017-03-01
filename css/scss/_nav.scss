@@ -45,6 +45,7 @@ nav {
       text-align: center;
       text-decoration: none;
       line-height: 100%;
+      color: #333;
     }
     @for $i from 1 through $navElements {
       &:nth-child(#{$navElements}n + #{$i}) {

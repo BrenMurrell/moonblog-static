@@ -1,5 +1,6 @@
-@import "nav.scss";
 @import "blocks.scss";
+@import "nav.scss";
+@import "typography";
 * {
   font-family: "Sanchez", sans-serif;
 }
@@ -12,13 +13,16 @@ h1, h2 {
 
 .navToggleTemp {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 0.2em;
+  left: 0.2em;
   z-index: 2;
-  padding: 0.25rem 0.5rem;
   display: block;
   background: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 2rem;
+  text-align: center;
   box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
   cursor: pointer;
+  border-radius: 3px;
 }
